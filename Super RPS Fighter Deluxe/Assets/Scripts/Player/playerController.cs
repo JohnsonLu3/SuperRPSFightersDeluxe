@@ -6,7 +6,7 @@ public class playerController : MonoBehaviour {
 
     bool rightFacing = false;
     float defualtSpeed = 0f;
-
+    int jumps = 1;
     [SerializeField]
     float fallSpeed;
     [SerializeField]
@@ -21,6 +21,7 @@ public class playerController : MonoBehaviour {
     float moveSpeed;
 
     float groundDistance;
+    int jumpCount;
     Rigidbody2D rb;
     BoxCollider2D bc;
 
@@ -30,12 +31,19 @@ public class playerController : MonoBehaviour {
         bc = GetComponent<BoxCollider2D>();
         moveSpeed = defualtSpeed;
         groundDistance = bc.bounds.extents.y;
+        jumpCount = 0;
     }
 	
 	// Update is called once per frame
 	void Update () {
         float horizontal = Input.GetAxis("p1_Horizontal");
         float vertical = Input.GetAxis("p1_Vertical");
+
+        if (IsGrounded())
+        {
+            jumpCount = 0;
+        }
+
         movement(horizontal);
         jump(vertical);
     }
@@ -51,9 +59,12 @@ public class playerController : MonoBehaviour {
     }
 
     void jump(float vertical) {
-        if (vertical > 0 && IsGrounded()) {
+        if (vertical > 0 && IsGrounded() && jumpCount == 0) {
             rb.velocity = new Vector2(rb.velocity.x, vertical * jumpForce);
+            jumpCount = 1;
         }
+
+        
     }
 
     bool IsGrounded()
