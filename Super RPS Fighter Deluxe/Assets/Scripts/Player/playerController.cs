@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerController : MonoBehaviour {
-
+    
     bool rightFacing = false;
-    bool falling = false;
-    int jumpFrames = 0; 
-
+    bool isJumping = false;
+    int jumpFrames = 0;
     float defualtSpeed = 0f;
-    int jumps = 1;
+    int jumpDelayFrames = 0;
+
+    [SerializeField]
+    string playerNum;
     float startingY;
     [SerializeField]
     float fallSpeed;
@@ -17,6 +19,8 @@ public class playerController : MonoBehaviour {
     float lowjump;
     [SerializeField]
     float jumpVelocity;
+    [SerializeField]
+    int jumpDelay;
     [SerializeField]
     float maxSpeed;
     [SerializeField]
@@ -28,8 +32,6 @@ public class playerController : MonoBehaviour {
     [SerializeField]
     float moveSpeed;
     [SerializeField]
-    int jumpCount;
-    [SerializeField]
     Transform groundCheck;
 
     Rigidbody2D rb;
@@ -40,14 +42,12 @@ public class playerController : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         defualtSpeed = moveSpeed;
-
-        jumpCount = 0;
     }
 	
 	// Update is called once per frame
 	void FixedUpdate() {
-        float horizontal = Input.GetAxis("p1_Horizontal");
-        float vertical = Input.GetAxis("p1_Vertical");
+        float horizontal = Input.GetAxis(playerNum + "_Horizontal");
+        float vertical = Input.GetAxis(playerNum + "_Vertical");
 
         if (horizontal == 0 || vertical <= 0) {
             moveSpeed = defualtSpeed;
@@ -65,11 +65,20 @@ public class playerController : MonoBehaviour {
         if (IsGrounded()) {
             jumpFrames = 0;
             moveSpeed = defualtSpeed;
+            if (isJumping) {
+                if (jumpDelayFrames == jumpDelay)
+                {
+                    isJumping = false;
+                }
+                else {
+                    jumpDelayFrames++;
+                }
+            }
         }
 
-        if (rb.velocity.y > 0 && vertical > 0 && !IsGrounded() && jumpFrames > 0 && jumpFrames < 10)
+        if (rb.velocity.y > 0 && vertical > 0 && !IsGrounded() && jumpFrames > 0 && jumpFrames < 8)
         {
-            print("Jumping -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
+            //print("Jumping -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
             rb.velocity += Vector2.up * Physics2D.gravity.y * (jumpVelocity * -1) * Time.deltaTime;
 
 
@@ -77,8 +86,7 @@ public class playerController : MonoBehaviour {
         }
         else if (rb.velocity.y < 0 && !IsGrounded())
         {
-            print("fall -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
-            falling = true;
+            //print("fall -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallSpeed - 1) * Time.deltaTime;
             if (jumpFrames > 0 && jumpFrames < 7)
             {
@@ -87,15 +95,15 @@ public class playerController : MonoBehaviour {
 
 
         }
-        else if (vertical > 0 && IsGrounded() && rb.velocity.y == 0 && !falling)
+        else if (vertical > 0 && IsGrounded() && rb.velocity.y == 0 && !isJumping)
         {
-            print("startjump -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
+            //print("startjump -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
             rb.velocity = Vector2.up * lowjump;
             increaseJumpFrames();
+            isJumping = true;
+            jumpDelayFrames = 0;
         }
-        else {
-            falling = false;
-        }
+        
 
     }
 
