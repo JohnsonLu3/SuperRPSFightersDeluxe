@@ -5,7 +5,8 @@ using UnityEngine;
 public class playerController : MonoBehaviour {
 
     bool rightFacing = false;
-    bool isJumping = false;
+    bool falling = false;
+    int jumpFrames = 0; 
 
     float defualtSpeed = 0f;
     int jumps = 1;
@@ -20,6 +21,8 @@ public class playerController : MonoBehaviour {
     float maxSpeed;
     [SerializeField]
     float speedInc;
+    [SerializeField]
+    float speedMul;
     [SerializeField]
     LayerMask ground;
     [SerializeField]
@@ -36,44 +39,70 @@ public class playerController : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
-        moveSpeed = defualtSpeed;
+        defualtSpeed = moveSpeed;
 
         jumpCount = 0;
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate() {
         float horizontal = Input.GetAxis("p1_Horizontal");
         float vertical = Input.GetAxis("p1_Vertical");
+
+        if (horizontal == 0 || vertical <= 0) {
+            moveSpeed = defualtSpeed;
+        }
 
         movement(horizontal);
         jump(vertical);
     }
 
     void movement(float horizontal) {
-        if (horizontal == 0) {
-            moveSpeed = defualtSpeed;
-        }
-        if (moveSpeed < maxSpeed) {
-            moveSpeed += speedInc;
-        }
         rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
     }
 
     void jump(float vertical) {
-        print("Velocity : " + rb.velocity.y);
-        print("Vertical : " + vertical);
-
-        if (vertical > 0 && IsGrounded()) {
-            rb.velocity = Vector2.up * jumpVelocity;
+        if (IsGrounded()) {
+            jumpFrames = 0;
+            moveSpeed = defualtSpeed;
         }
 
-        if (rb.velocity.y < 0) {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallSpeed - 1 ) * Time.deltaTime;
-        } else if (rb.velocity.y > 0 && vertical > 0) {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowjump - 1 )* Time.deltaTime;
+        if (rb.velocity.y > 0 && vertical > 0 && !IsGrounded() && jumpFrames > 0 && jumpFrames < 10)
+        {
+            print("Jumping -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (jumpVelocity * -1) * Time.deltaTime;
+
+
+            increaseJumpFrames();
+        }
+        else if (rb.velocity.y < 0 && !IsGrounded())
+        {
+            print("fall -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
+            falling = true;
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallSpeed - 1) * Time.deltaTime;
+            if (jumpFrames > 0 && jumpFrames < 7)
+            {
+                moveSpeed = maxSpeed;
+            }
+
+
+        }
+        else if (vertical > 0 && IsGrounded() && rb.velocity.y == 0 && !falling)
+        {
+            print("startjump -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
+            rb.velocity = Vector2.up * lowjump;
+            increaseJumpFrames();
+        }
+        else {
+            falling = false;
         }
 
+    }
+
+    void increaseJumpFrames() {
+        if (jumpFrames < int.MaxValue) {
+            jumpFrames++;
+        }
     }
 
     bool IsGrounded()
