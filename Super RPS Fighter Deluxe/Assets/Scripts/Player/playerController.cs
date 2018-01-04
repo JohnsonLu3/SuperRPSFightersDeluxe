@@ -33,6 +33,8 @@ public class playerController : MonoBehaviour {
     float moveSpeed;
     [SerializeField]
     Transform groundCheck;
+    [SerializeField]
+    GameObject otherPlayer;
 
     Rigidbody2D rb;
     BoxCollider2D bc;
@@ -52,7 +54,7 @@ public class playerController : MonoBehaviour {
         if (horizontal == 0 || vertical <= 0) {
             moveSpeed = defualtSpeed;
         }
-
+        changeFacing();
         movement(horizontal);
         jump(vertical);
     }
@@ -125,5 +127,15 @@ public class playerController : MonoBehaviour {
         }
 
         return false;
+    }
+
+    void changeFacing() {
+        if (otherPlayer.transform.position.x > transform.position.x)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+        else {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 }
