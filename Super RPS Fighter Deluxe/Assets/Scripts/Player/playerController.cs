@@ -132,10 +132,24 @@ public class playerController : MonoBehaviour {
     void changeFacing() {
         if (otherPlayer.transform.position.x > transform.position.x)
         {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            if (playerNum == "p1")
+            {
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
+            else {
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
+            }
+            
         }
         else {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            if (playerNum == "p1")
+            {
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
+            }
+            else
+            {
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
         }
     }
 }
