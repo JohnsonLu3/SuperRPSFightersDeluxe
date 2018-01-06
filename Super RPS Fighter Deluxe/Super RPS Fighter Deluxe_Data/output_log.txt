@@ -17,15 +17,35 @@ Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDel
 Loading C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\TextMeshPro-5.5-1.0.56-Runtime.dll (this message is harmless)
 Loading C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\TextMeshPro-5.5-1.0.56-Runtime.dll into Unity Child Domain
-- Completed reload, in  0.018 seconds
+- Completed reload, in  0.116 seconds
 Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 144Hz; virtual: 3840x1080 at -1920,0
 <RI> Initialized touch support.
-UnloadTime: 1.007679 ms
+UnloadTime: 0.998079 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.127356 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 414.
+Total: 0.455679 ms (FindLiveObjects: 0.022719 ms CreateObjectMapping: 0.016319 ms MarkObjects: 0.403839 ms  DeleteObjects: 0.011839 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.420799 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 434.
+Total: 0.635519 ms (FindLiveObjects: 0.035839 ms CreateObjectMapping: 0.028479 ms MarkObjects: 0.534399 ms  DeleteObjects: 0.036479 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.342399 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 414.
+Total: 0.430719 ms (FindLiveObjects: 0.020159 ms CreateObjectMapping: 0.013759 ms MarkObjects: 0.384319 ms  DeleteObjects: 0.011519 ms)
+
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 3890 -> priority: 1 
+  Thread -> id: 3508 -> priority: 1 

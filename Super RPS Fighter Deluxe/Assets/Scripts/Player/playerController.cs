@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour {
     
+    // Game Checks
     bool rightFacing = false;
     bool isJumping = false;
     int jumpFrames = 0;
     float defualtSpeed = 0f;
     int jumpDelayFrames = 0;
+    bool rockDown = false;
+    bool paperDown = false;
+    bool scissorDown = false;
 
+    // Game Qualities
     [SerializeField]
     string playerNum;
     float startingY;
@@ -36,6 +41,7 @@ public class playerController : MonoBehaviour {
     [SerializeField]
     GameObject otherPlayer;
 
+    // Game Objects
     Rigidbody2D rb;
     BoxCollider2D bc;
 
@@ -57,8 +63,45 @@ public class playerController : MonoBehaviour {
         changeFacing();
         movement(horizontal);
         jump(vertical);
+        attack();
     }
 
+    void attack()
+    {
+        float rockAttack = Input.GetAxisRaw(playerNum + "_rock");
+        float paperAttack = Input.GetAxisRaw(playerNum + "_paper");
+        float scissorAttack = Input.GetAxisRaw(playerNum + "_scissor");
+
+        if (rockAttack == 1 && !rockDown) {
+             rockDown = true;
+             print("rock");
+        }else if(paperAttack == 1 && !paperDown)
+        {
+            paperDown = true;
+            print("paper");
+        }else if(scissorAttack == 1 && !scissorDown)
+        {
+            scissorDown = true;
+            print("scissor");
+        }
+        else
+        {
+            if (rockAttack == 0 && rockDown)
+            {
+                rockDown = false;
+            }
+            else if (paperAttack == 0 && paperDown)
+            {
+                paperDown = false;
+            }
+            else if (scissorAttack == 0 && scissorDown)
+            {
+                scissorDown = false;
+            }
+        }
+
+
+    }
     void movement(float horizontal) {
         rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
     }
