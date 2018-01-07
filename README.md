@@ -30,3 +30,28 @@
 |   Rock   | U |
 |   Paper   | O |
 |   Scissor   | ; |
+
+
+## Todo:
+### Bugs:
++ animation offset
++ jumping on player heads doesn't work right
++ purple has a weird bounce affect
++ purple has weird artifacting
+
+### GamePlay:
++ Combo
++ Health
++ Dynamic Hit Box
++ Round CountDown
++ Round Win
++ Game Win
++ Timer
+
+### Assets:
++ Idle
++ Damage
++ Hud elements
++ Pause elements
++ Main menu elements
++ Round Count Down
