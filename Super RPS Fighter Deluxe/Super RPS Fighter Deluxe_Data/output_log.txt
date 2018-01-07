@@ -21,31 +21,123 @@ Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDel
 Loading C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\TextMeshPro-5.5-1.0.56-Runtime.dll (this message is harmless)
 Loading C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\TextMeshPro-5.5-1.0.56-Runtime.dll into Unity Child Domain
-- Completed reload, in  0.116 seconds
+- Completed reload, in  0.020 seconds
 Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 144Hz; virtual: 3840x1080 at -1920,0
 <RI> Initialized touch support.
-UnloadTime: 0.998079 ms
+UnloadTime: 1.027839 ms
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.127356 ms
+UnloadTime: 3.938236 ms
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 414.
-Total: 0.455679 ms (FindLiveObjects: 0.022719 ms CreateObjectMapping: 0.016319 ms MarkObjects: 0.403839 ms  DeleteObjects: 0.011839 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 441.
+Total: 0.463679 ms (FindLiveObjects: 0.032319 ms CreateObjectMapping: 0.023039 ms MarkObjects: 0.393279 ms  DeleteObjects: 0.014079 ms)
 
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.420799 ms
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 434.
-Total: 0.635519 ms (FindLiveObjects: 0.035839 ms CreateObjectMapping: 0.028479 ms MarkObjects: 0.534399 ms  DeleteObjects: 0.036479 ms)
+rock
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.342399 ms
+scissor
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 414.
-Total: 0.430719 ms (FindLiveObjects: 0.020159 ms CreateObjectMapping: 0.013759 ms MarkObjects: 0.384319 ms  DeleteObjects: 0.011519 ms)
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+rock
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+scissor
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+rock
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+scissor
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+paper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+rock
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+rock
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+rock
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+scissor
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+scissor
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+scissor
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 3508 -> priority: 1 
+  Thread -> id: 1618 -> priority: 1 
