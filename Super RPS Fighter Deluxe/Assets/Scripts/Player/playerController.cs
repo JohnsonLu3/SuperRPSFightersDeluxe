@@ -13,42 +13,36 @@ public class playerController : MonoBehaviour {
     bool rockDown = false;
     bool paperDown = false;
     bool scissorDown = false;
+    float startingY;
+
+    int health = 100;
+
 
     // Game Qualities
-    [SerializeField]
-    string playerNum;
-    float startingY;
-    [SerializeField]
-    float fallSpeed;
-    [SerializeField]
-    float lowjump;
-    [SerializeField]
-    float jumpVelocity;
-    [SerializeField]
-    int jumpDelay;
-    [SerializeField]
-    float maxSpeed;
-    [SerializeField]
-    float speedInc;
-    [SerializeField]
-    float speedMul;
-    [SerializeField]
-    LayerMask ground;
-    [SerializeField]
-    float moveSpeed;
-    [SerializeField]
-    Transform groundCheck;
-    [SerializeField]
-    GameObject otherPlayer;
+
+    [SerializeField] string playerNum;
+    [SerializeField] float fallSpeed;
+    [SerializeField] float lowjump;
+    [SerializeField] float jumpVelocity;
+    [SerializeField] int jumpDelay;
+    [SerializeField] float maxSpeed;
+    [SerializeField] float speedInc;
+    [SerializeField] float speedMul;
+    [SerializeField] LayerMask ground;
+    [SerializeField] float moveSpeed;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] GameObject otherPlayer;
 
     // Game Objects
     Rigidbody2D rb;
     BoxCollider2D bc;
+    Animator anim;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
         defualtSpeed = moveSpeed;
     }
 	
@@ -74,14 +68,17 @@ public class playerController : MonoBehaviour {
 
         if (rockAttack == 1 && !rockDown) {
              rockDown = true;
-             print("rock");
+            anim.SetTrigger("rock1");
+            print("rock");
         }else if(paperAttack == 1 && !paperDown)
         {
             paperDown = true;
+            anim.SetTrigger("paper1");
             print("paper");
         }else if(scissorAttack == 1 && !scissorDown)
         {
             scissorDown = true;
+            anim.SetTrigger("scissor1");
             print("scissor");
         }
         else
@@ -147,6 +144,7 @@ public class playerController : MonoBehaviour {
             increaseJumpFrames();
             isJumping = true;
             jumpDelayFrames = 0;
+            anim.SetTrigger("jump");
         }
         
 

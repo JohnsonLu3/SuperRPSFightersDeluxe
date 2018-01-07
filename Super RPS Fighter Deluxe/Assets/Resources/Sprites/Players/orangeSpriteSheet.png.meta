@@ -1,10 +1,25 @@
 fileFormatVersion: 2
 guid: 00b96ecb7026493428c646c23f2c3d9f
-timeCreated: 1515257816
+timeCreated: 1515280271
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: orangeSpriteSheet_0
+    21300000: orange_rock
+    21300002: orange_attackStart1
+    21300004: orange_attackStart2
+    21300006: orange_rock3
+    21300008: orange_scissor3
+    21300010: orange_paper3
+    21300012: orange_paper2
+    21300014: orange_paper1
+    21300016: orange_scissor1
+    21300018: orange_rock1
+    21300020: orange_jump1
+    21300022: orange_jump2
+    21300024: orange_jump3
+    21300026: orange_attackStart3
+    21300028: orange_rock2
+    21300030: orange_scissor2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -71,13 +86,195 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: orangeSpriteSheet_0
+      name: orange_attackStart1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 751
-        width: 180
+        x: 39
+        y: 804
+        width: 152
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_attackStart2
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 804
+        width: 181
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_rock3
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 802
+        width: 239
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_scissor3
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 802
+        width: 271
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_paper3
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 799
+        width: 269
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_paper2
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 607
+        width: 278
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_paper1
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 442
+        width: 218
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_scissor1
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 442
+        width: 215
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_rock1
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 442
+        width: 194
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_jump1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 227
+        width: 155
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_jump2
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 227
+        width: 129
         height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_jump3
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 250
+        width: 127
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_attackStart3
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 609
+        width: 183
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_rock2
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 607
+        width: 241
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: orange_scissor2
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 607
+        width: 278
+        height: 143
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
