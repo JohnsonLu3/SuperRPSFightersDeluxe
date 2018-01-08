@@ -205,8 +205,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 175
-  m_fontSizeBase: 175
+  m_fontSize: 180
+  m_fontSizeBase: 180
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -528,7 +528,7 @@ Prefab:
     - target: {fileID: 212015777944068618, guid: f3fda89fc2a89214bba951453e1bfd2f,
         type: 2}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3fda89fc2a89214bba951453e1bfd2f, type: 2}
@@ -584,11 +584,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6f5826749e3834aaa7a207adaabb22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
+  timer: {fileID: 754501980}
   rockLabel: {fileID: 1224290970}
   paperLabel: {fileID: 1309696557}
   scissorLabel: {fileID: 595188320}
-  fightLabel: {fileID: 103056288}
+  shootLabel: {fileID: 103056288}
 --- !u!1 &454565713
 GameObject:
   m_ObjectHideFlags: 0
