@@ -6,6 +6,7 @@ public class playerController : MonoBehaviour {
     
     // Game Checks
     bool rightFacing = false;
+    bool tempFacing = false;
     bool isJumping = false;
     int jumpFrames = 0;
     float defualtSpeed = 0f;
@@ -25,9 +26,7 @@ public class playerController : MonoBehaviour {
     [SerializeField] float lowjump;
     [SerializeField] float jumpVelocity;
     [SerializeField] int jumpDelay;
-    [SerializeField] float maxSpeed;
-    [SerializeField] float speedInc;
-    [SerializeField] float speedMul;
+    [SerializeField] float dashSpeed;
     [SerializeField] LayerMask ground;
     [SerializeField] float moveSpeed;
     [SerializeField] Transform groundCheck;
@@ -44,6 +43,8 @@ public class playerController : MonoBehaviour {
         bc = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         defualtSpeed = moveSpeed;
+        changeFacing();
+        tempFacing = rightFacing;
     }
 	
 	// Update is called once per frame
@@ -51,13 +52,16 @@ public class playerController : MonoBehaviour {
         float horizontal = Input.GetAxis(playerNum + "_Horizontal");
         float vertical = Input.GetAxis(playerNum + "_Vertical");
 
-        if (horizontal == 0 || vertical <= 0) {
+        if (vertical <= 0) {
             moveSpeed = defualtSpeed;
         }
         changeFacing();
-        movement(horizontal);
-        jump(vertical);
-        attack();
+
+        if (Round.roundStart) {
+            movement(horizontal);
+            jump(vertical);
+            attack();
+        }
     }
 
     void attack()
@@ -67,10 +71,11 @@ public class playerController : MonoBehaviour {
         float scissorAttack = Input.GetAxisRaw(playerNum + "_scissor");
 
         if (rockAttack == 1 && !rockDown) {
-             rockDown = true;
+            rockDown = true;
             anim.SetTrigger("rock1");
             print("rock");
-        }else if(paperAttack == 1 && !paperDown)
+        }
+        else if(paperAttack == 1 && !paperDown)
         {
             paperDown = true;
             anim.SetTrigger("paper1");
@@ -120,7 +125,6 @@ public class playerController : MonoBehaviour {
 
         if (rb.velocity.y > 0 && vertical > 0 && !IsGrounded() && jumpFrames > 0 && jumpFrames < 8)
         {
-            //print("Jumping -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
             rb.velocity += Vector2.up * Physics2D.gravity.y * (jumpVelocity * -1) * Time.deltaTime;
 
 
@@ -128,18 +132,10 @@ public class playerController : MonoBehaviour {
         }
         else if (rb.velocity.y < 0 && !IsGrounded())
         {
-            //print("fall -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallSpeed - 1) * Time.deltaTime;
-            if (jumpFrames > 0 && jumpFrames < 7)
-            {
-                moveSpeed = maxSpeed;
-            }
-
-
         }
         else if (vertical > 0 && IsGrounded() && rb.velocity.y == 0 && !isJumping)
         {
-            //print("startjump -- frame : " + jumpFrames + " Vertical : " + vertical + " velocity : " + rb.velocity.y);
             rb.velocity = Vector2.up * lowjump;
             increaseJumpFrames();
             isJumping = true;
@@ -171,26 +167,31 @@ public class playerController : MonoBehaviour {
     }
 
     void changeFacing() {
+
+        setFacing();
+
+        if (tempFacing != rightFacing && rightFacing) 
+        {
+            //anim.SetTrigger("turn");
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            tempFacing = rightFacing;
+        }
+        else if (tempFacing != rightFacing && !rightFacing) 
+        {
+            //anim.SetTrigger("turn");
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            tempFacing = rightFacing;
+        }
+    }
+
+    void setFacing() {
         if (otherPlayer.transform.position.x > transform.position.x)
         {
-            if (playerNum == "p1")
-            {
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
-            }
-            else {
-                transform.localRotation = Quaternion.Euler(0, 180, 0);
-            }
-            
+            rightFacing = true;
         }
-        else {
-            if (playerNum == "p1")
-            {
-                transform.localRotation = Quaternion.Euler(0, 180, 0);
-            }
-            else
-            {
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
-            }
+        else
+        {
+            rightFacing = false;
         }
     }
 }
