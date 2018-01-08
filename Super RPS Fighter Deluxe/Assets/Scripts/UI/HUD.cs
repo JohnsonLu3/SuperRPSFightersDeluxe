@@ -17,7 +17,7 @@ public class HUD : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        time = roundCountDownTime * 60;
+        time = Round.roundTime * 60;
         countDown = Time.time + Round.roundCountDownTime * 60;
     }
 	
