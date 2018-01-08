@@ -21,123 +21,61 @@ Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDel
 Loading C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\TextMeshPro-5.5-1.0.56-Runtime.dll (this message is harmless)
 Loading C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\TextMeshPro-5.5-1.0.56-Runtime.dll into Unity Child Domain
-- Completed reload, in  0.020 seconds
+- Completed reload, in  0.211 seconds
 Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\JL\Desktop\SuperRPSFighterDeluxe\SuperRPSFightersDeluxe\Super RPS Fighter Deluxe\Super RPS Fighter Deluxe_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 144Hz; virtual: 3840x1080 at -1920,0
 <RI> Initialized touch support.
-UnloadTime: 1.027839 ms
+UnloadTime: 1.150718 ms
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.938236 ms
+UnloadTime: 3.992316 ms
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 441.
-Total: 0.463679 ms (FindLiveObjects: 0.032319 ms CreateObjectMapping: 0.023039 ms MarkObjects: 0.393279 ms  DeleteObjects: 0.014079 ms)
+Total: 0.436479 ms (FindLiveObjects: 0.018879 ms CreateObjectMapping: 0.018559 ms MarkObjects: 0.383039 ms  DeleteObjects: 0.015679 ms)
 
-paper
+NullReferenceException: Object reference not set to an instance of an object
+  at playerController.jump (Single vertical) [0x00000] in <filename unknown>:0 
+  at playerController.FixedUpdate () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-rock
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.473279 ms
 
-scissor
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 37 unused Assets to reduce memory usage. Loaded Objects now: 434.
+Total: 0.645439 ms (FindLiveObjects: 0.027199 ms CreateObjectMapping: 0.017279 ms MarkObjects: 0.540159 ms  DeleteObjects: 0.060479 ms)
 
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.365439 ms
 
-rock
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 441.
+Total: 0.377919 ms (FindLiveObjects: 0.028799 ms CreateObjectMapping: 0.013439 ms MarkObjects: 0.325439 ms  DeleteObjects: 0.009599 ms)
 
-scissor
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.496319 ms
 
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 37 unused Assets to reduce memory usage. Loaded Objects now: 434.
+Total: 0.726079 ms (FindLiveObjects: 0.018559 ms CreateObjectMapping: 0.017279 ms MarkObjects: 0.608319 ms  DeleteObjects: 0.078079 ms)
 
-rock
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.324479 ms
 
-scissor
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 441.
+Total: 0.431679 ms (FindLiveObjects: 0.022079 ms CreateObjectMapping: 0.034879 ms MarkObjects: 0.365439 ms  DeleteObjects: 0.008639 ms)
 
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.439999 ms
 
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 37 unused Assets to reduce memory usage. Loaded Objects now: 434.
+Total: 0.643839 ms (FindLiveObjects: 0.017919 ms CreateObjectMapping: 0.017919 ms MarkObjects: 0.547199 ms  DeleteObjects: 0.059839 ms)
 
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.388479 ms
 
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-paper
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-rock
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-rock
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-rock
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-scissor
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-scissor
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-scissor
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 441.
+Total: 0.439359 ms (FindLiveObjects: 0.030399 ms CreateObjectMapping: 0.016639 ms MarkObjects: 0.381759 ms  DeleteObjects: 0.009919 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1618 -> priority: 1 
+  Thread -> id: 304c -> priority: 1 
