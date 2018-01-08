@@ -38,7 +38,6 @@
 + jumping on player heads doesn't work right
 + purple has a weird bounce affect
 + purple has weird artifacting
-+ controls dont work after starting again from the menu
 
 ### GamePlay:
 + Combo
