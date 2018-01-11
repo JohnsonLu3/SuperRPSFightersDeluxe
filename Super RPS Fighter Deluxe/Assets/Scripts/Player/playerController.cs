@@ -16,6 +16,11 @@ public class playerController : MonoBehaviour {
     bool scissorDown = false;
     float startingY;
 
+    // Attack Checks
+    int rockCombo = 0;
+    int paperCombo = 0;
+    int scissorCombo = 0;
+
     int health = 100;
 
 
@@ -71,20 +76,82 @@ public class playerController : MonoBehaviour {
         float scissorAttack = Input.GetAxisRaw(playerNum + "_scissor");
 
         if (rockAttack == 1 && !rockDown) {
+            if (rockCombo < 3)
+            {
+                rockCombo++;
+            }
+            paperCombo = 0;
+            scissorCombo = 0;
+
             rockDown = true;
-            anim.SetTrigger("rock1");
-            print("rock");
+
+            switch (rockCombo) {
+                case 1:
+                    anim.SetTrigger("rock1"); 
+                    break;
+            case 2:
+                    anim.SetTrigger("rock2"); 
+                    break;
+            case 3:
+                    anim.SetTrigger("rock3");
+                    break;
+            default:
+                    break;
+            }
+
         }
         else if(paperAttack == 1 && !paperDown)
         {
+            if (paperCombo < 3)
+            {
+                paperCombo++;
+            }
+            rockCombo = 0;
+            scissorCombo = 0;
+
             paperDown = true;
-            anim.SetTrigger("paper1");
-            print("paper");
-        }else if(scissorAttack == 1 && !scissorDown)
+
+            switch (paperCombo)
+            {
+                case 1:
+                    anim.SetTrigger("paper1");
+                    break;
+                case 2:
+                    anim.SetTrigger("paper2");
+                    break;
+                case 3:
+                    anim.SetTrigger("paper3");
+                    break;
+                default:
+                    break;
+            }
+
+        }
+        else if(scissorAttack == 1 && !scissorDown)
         {
+            if (scissorCombo < 3)
+            {
+                scissorCombo++;
+            }
+            rockCombo = 0;
+            paperCombo = 0;
+
             scissorDown = true;
-            anim.SetTrigger("scissor1");
-            print("scissor");
+
+            switch (scissorCombo)
+            {
+                case 1:
+                    anim.SetTrigger("scissor1");
+                    break;
+                case 2:
+                    anim.SetTrigger("scissor2");
+                    break;
+                case 3:
+                    anim.SetTrigger("scissor3");
+                    break;
+                default:
+                    break;
+            }
         }
         else
         {
