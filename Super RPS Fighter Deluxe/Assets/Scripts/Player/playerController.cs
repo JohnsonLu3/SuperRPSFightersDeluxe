@@ -36,6 +36,8 @@ public class playerController : MonoBehaviour {
     [SerializeField] float moveSpeed;
     [SerializeField] Transform groundCheck;
     [SerializeField] GameObject otherPlayer;
+    [SerializeField] BoxCollider2D attackTrigger;
+    [SerializeField] GameObject sprintRender;
 
     // Game Objects
     Rigidbody2D rb;
@@ -46,7 +48,7 @@ public class playerController : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
-        anim = GetComponent<Animator>();
+        anim = sprintRender.GetComponent<Animator>();
         defualtSpeed = moveSpeed;
         changeFacing();
         tempFacing = rightFacing;
@@ -85,19 +87,7 @@ public class playerController : MonoBehaviour {
 
             rockDown = true;
 
-            switch (rockCombo) {
-                case 1:
-                    anim.SetTrigger("rock1"); 
-                    break;
-            case 2:
-                    anim.SetTrigger("rock2"); 
-                    break;
-            case 3:
-                    anim.SetTrigger("rock3");
-                    break;
-            default:
-                    break;
-            }
+            playComboAnimation("rock", rockCombo);
 
         }
         else if(paperAttack == 1 && !paperDown)
@@ -110,22 +100,7 @@ public class playerController : MonoBehaviour {
             scissorCombo = 0;
 
             paperDown = true;
-
-            switch (paperCombo)
-            {
-                case 1:
-                    anim.SetTrigger("paper1");
-                    break;
-                case 2:
-                    anim.SetTrigger("paper2");
-                    break;
-                case 3:
-                    anim.SetTrigger("paper3");
-                    break;
-                default:
-                    break;
-            }
-
+            playComboAnimation("paper", paperCombo);
         }
         else if(scissorAttack == 1 && !scissorDown)
         {
@@ -138,20 +113,7 @@ public class playerController : MonoBehaviour {
 
             scissorDown = true;
 
-            switch (scissorCombo)
-            {
-                case 1:
-                    anim.SetTrigger("scissor1");
-                    break;
-                case 2:
-                    anim.SetTrigger("scissor2");
-                    break;
-                case 3:
-                    anim.SetTrigger("scissor3");
-                    break;
-                default:
-                    break;
-            }
+            playComboAnimation("scissor", scissorCombo);
         }
         else
         {
@@ -171,6 +133,24 @@ public class playerController : MonoBehaviour {
 
 
     }
+
+    void playComboAnimation(string attackName, int combo) {
+        switch (combo)
+        {
+            case 1:
+                anim.SetTrigger(attackName + "1");
+                break;
+            case 2:
+                anim.SetTrigger(attackName + "2");
+                break;
+            case 3:
+                anim.SetTrigger(attackName + "3");
+                break;
+            default:
+                break;
+        }
+    }
+
     void movement(float horizontal) {
         rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
     }
