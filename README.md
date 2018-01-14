@@ -34,19 +34,15 @@
 
 ## Todo:
 ### Bugs:
-+ animation offset
 + jumping on player heads doesn't work right
 + purple has a weird bounce affect
 + purple has weird artifacting
 
 ### GamePlay:
-+ Combo
 + Health
-+ Dynamic Hit Box
-+ Round CountDown
++ Dynamic Hit Box [IP]
 + Round Win
 + Game Win
-+ Timer
 
 ### Assets:
 + Idle
