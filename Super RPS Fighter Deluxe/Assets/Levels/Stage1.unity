@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 197527713}
   m_Layer: 0
   m_Name: AttackHitBox
-  m_TagString: Untagged
+  m_TagString: attk_hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -954,7 +954,7 @@ GameObject:
   - component: {fileID: 667330444}
   m_Layer: 0
   m_Name: armhitbox
-  m_TagString: Untagged
+  m_TagString: arm_hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1086,7 +1086,7 @@ GameObject:
   - component: {fileID: 750783291}
   m_Layer: 0
   m_Name: BodyHitBox
-  m_TagString: Untagged
+  m_TagString: body_hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1282,7 +1282,7 @@ GameObject:
   - component: {fileID: 798906126}
   m_Layer: 0
   m_Name: BodyHitBox
-  m_TagString: Untagged
+  m_TagString: body_hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1325,7 +1325,7 @@ GameObject:
   - component: {fileID: 872370789}
   m_Layer: 0
   m_Name: armhitbox
-  m_TagString: Untagged
+  m_TagString: arm_hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2128,6 +2128,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 884138969}
+    - target: {fileID: 114540614749759732, guid: cf1b77c26b92da246b839e0314ef6371,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: resumeGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf1b77c26b92da246b839e0314ef6371, type: 2}
   m_IsPrefabParent: 0
@@ -2596,7 +2601,7 @@ GameObject:
   - component: {fileID: 1648016032}
   m_Layer: 0
   m_Name: AttackHitBox
-  m_TagString: Untagged
+  m_TagString: attk_hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

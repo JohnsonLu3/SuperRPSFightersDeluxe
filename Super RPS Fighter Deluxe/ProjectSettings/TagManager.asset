@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - body_hitbox
+  - arm_hitbox
+  - attk_hitbox
   layers:
   - Default
   - TransparentFX

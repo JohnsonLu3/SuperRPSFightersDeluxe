@@ -9,26 +9,39 @@ public class PauseMenu : MonoBehaviour {
     [SerializeField]
     public GameObject pauseMenuUI;
 
+    bool pauseDown = false;
+
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+
+        float pause = Input.GetAxisRaw("Pause");
+
+        if (pause == 1 && !pauseDown)
+        {
+            pauseDown = true;
+
             if (isPaused)
             {
-                resume();
+                resumeGame();
             }
-            else {
-                pause();
+            else
+            {
+                pauseGame();
             }
+        }
+        else {
+            if (pause == 0 && pauseDown)
+                pauseDown = false;
         }
     }
 
 
-    public void resume() {
+    public void resumeGame() {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
 
-    public void pause() {
+    public void pauseGame() {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -39,7 +52,7 @@ public class PauseMenu : MonoBehaviour {
     }
 
     public void loadMenu() {
-        resume();
+        resumeGame();
         SceneManager.LoadScene("Menu");
     }
 }
