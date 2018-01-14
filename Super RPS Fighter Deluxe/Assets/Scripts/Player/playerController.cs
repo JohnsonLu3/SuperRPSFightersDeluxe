@@ -36,7 +36,7 @@ public class playerController : MonoBehaviour {
     [SerializeField] float moveSpeed;
     [SerializeField] Transform groundCheck;
     [SerializeField] GameObject otherPlayer;
-    [SerializeField] BoxCollider2D attackTrigger;
+    [SerializeField] Collider2D attackTrigger;
     [SerializeField] GameObject sprintRender;
 
     // Game Objects
@@ -51,7 +51,7 @@ public class playerController : MonoBehaviour {
         anim = sprintRender.GetComponent<Animator>();
         defualtSpeed = moveSpeed;
         changeFacing();
-        tempFacing = rightFacing;
+        tempFacing = true;
     }
 	
 	// Update is called once per frame
@@ -131,7 +131,11 @@ public class playerController : MonoBehaviour {
             }
         }
 
+        hitDection(attackTrigger);
+    }
 
+    void hitDection(Collider2D col) {
+        Debug.Log(col.gameObject.tag);
     }
 
     void playComboAnimation(string attackName, int combo) {

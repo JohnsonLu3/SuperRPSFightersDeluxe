@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - p1_body_hitbox
+  - p2_body_hitbox
+  - p1_arm_hitbox
+  - p2_arm_hitbox
+  - p1_attk_hitbox
+  - p2_attk_hitbox
   layers:
   - Default
   - TransparentFX
