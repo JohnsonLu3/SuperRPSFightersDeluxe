@@ -9,27 +9,27 @@
 
 
 ## Controls:
-| General        | Button       |
-| ------------- |:-------------:|
-| Pause     | Escape |
+| General        | Keyboard       | XBox |
+| ------------- |:-------------:|:---------------:|
+| Pause     | Escape | Start |
 
-| Player 1        | Button       |
-| ------------- |:-------------:|
-|   Left   | A |
-|   Right   | D |
-|   Jump   | W |
-|   Rock   | Q |
-|   Paper   | E |
-|   Scissor   | F |
+| Player 1        | Keyboard       | XBox |
+| ------------- |:-------------:|:---------------:|
+|   Left   | A | Left |
+|   Right   | D | Right |
+|   Jump   | W | A |
+|   Rock   | Q | X |
+|   Paper   | E | Y |
+|   Scissor   | F | B |
 
-| Player 2        | Button       |
-| ------------- |:-------------:|
-|   Left   | J |
-|   Right   | L |
-|   Jump   | I |
-|   Rock   | U |
-|   Paper   | O |
-|   Scissor   | ; |
+| Player 2        | Keyboard       | XBox |
+| ------------- |:-------------:|:------------:|
+|   Left   | J | Left |
+|   Right   | L | Right |
+|   Jump   | I | A |
+|   Rock   | U | X |
+|   Paper   | O | Y |
+|   Scissor   | ; | B |
 
 
 ## Todo:
