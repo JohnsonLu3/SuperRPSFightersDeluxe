@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 197527713}
   m_Layer: 0
   m_Name: AttackHitBox
-  m_TagString: p2_attk_hitbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -954,7 +954,7 @@ GameObject:
   - component: {fileID: 667330444}
   m_Layer: 0
   m_Name: armhitbox
-  m_TagString: p1_arm_hitbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1086,7 +1086,7 @@ GameObject:
   - component: {fileID: 750783291}
   m_Layer: 0
   m_Name: BodyHitBox
-  m_TagString: p2_body_hitbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1282,7 +1282,7 @@ GameObject:
   - component: {fileID: 798906126}
   m_Layer: 0
   m_Name: BodyHitBox
-  m_TagString: p1_body_hitbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1325,7 +1325,7 @@ GameObject:
   - component: {fileID: 872370789}
   m_Layer: 0
   m_Name: armhitbox
-  m_TagString: p2_arm_hitbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2596,7 +2596,7 @@ GameObject:
   - component: {fileID: 1648016032}
   m_Layer: 0
   m_Name: AttackHitBox
-  m_TagString: p1_attk_hitbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -130,12 +130,14 @@ public class playerController : MonoBehaviour {
                 scissorDown = false;
             }
         }
-
-        hitDection(attackTrigger);
     }
 
-    void hitDection(Collider2D col) {
-        Debug.Log(col.gameObject.tag);
+    void OnTriggerEnter2D(Collider2D col) {
+        if(col.gameObject.tag == "body_hitbox" || col.gameObject.tag == "arm_hitbox")
+        {
+            // damage other player
+            Debug.Log(col.gameObject.tag);
+        }
     }
 
     void playComboAnimation(string attackName, int combo) {
